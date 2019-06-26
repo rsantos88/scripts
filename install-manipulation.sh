@@ -27,8 +27,7 @@ sudo apt install libjpeg8-dev # Needed for mjpeg carrier
 sudo apt install libedit-dev # Enables keyboard arrow keys within an RPC communication channel via terminal
 mkdir -p ~/repos; cd ~/repos # Create $HOME/repos if it doesn't exist; then, enter it
 git clone https://github.com/robotology/yarp
-cd yarp && mkdir build && cd build
-cmake .. -DSKIP_ACE=ON -DCREATE_GUIS=ON -DENABLE_yarpcar_mjpeg=ON # configure
+cd yarp && mkdir build && cd build && cmake .. -DSKIP_ACE=ON -DCREATE_GUIS=ON -DENABLE_yarpcar_mjpeg=ON # configure
 make -j$(nproc) # Compile
 sudo make install && sudo ldconfig && cd # Install and go home
 echo -e "Installing yarp... \e[92m[ok]\e[0m"
@@ -62,7 +61,6 @@ sudo ldconfig  # Just in case
 echo Installing teo-configuration-files
 cd
 git clone https://github.com/roboticslab-uc3m/teo-configuration-files
-cd teo-configuration-files && mkdir build && cd build
-cmake .. && sudo make install
+cd teo-configuration-files && mkdir build && cd build && cmake .. && sudo make install
 echo -e "Installing teo-configuration-files... \e[92m[ok]\e[0m"
 echo -e "\e[2mInstallation completed successfully\e[0m"
