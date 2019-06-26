@@ -18,7 +18,7 @@ echo Installing git...
 sudo apt install git
 git config --global user.name "rsantos88"
 git config --global user.email "rasantos@it.uc3m.es"
-echo -e "echo Installing git... \e[92m[ok]\e[0m"
+echo -e "Installing git... \e[92m[ok]\e[0m"
 echo Installing Yarp...
 sudo apt install build-essential git
 sudo apt install libeigen3-dev # Needed for creating YARP lib_math used for kinematics, etc.
@@ -31,7 +31,7 @@ cd yarp && mkdir build && cd build
 cmake .. -DSKIP_ACE=ON -DCREATE_GUIS=ON -DENABLE_yarpcar_mjpeg=ON # configure
 make -j$(nproc) # Compile
 sudo make install && sudo ldconfig && cd # Install and go home
-echo -e "echo Installing yarp... \e[92m[ok]\e[0m"
+echo -e "Installing yarp... \e[92m[ok]\e[0m"
 echo enabling yarp auto completion...
 source ~/repos/yarp/scripts/yarp_completion # Activate in current bash session
 echo "source ~/repos/yarp/scripts/yarp_completion" >> ~/.bashrc # Activate in future bash sessions
