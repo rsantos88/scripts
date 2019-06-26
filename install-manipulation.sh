@@ -48,7 +48,7 @@ echo Installing color debug...
 mkdir -p ~/repos && cd ~/repos
 git clone https://github.com/roboticslab-uc3m/color-debug 
 mkdir -p color-debug/build && cd color-debug/build
-make .. && sudo make install
+cmake .. && sudo make install
 echo -e "Installing color debug... \e[92m[ok]\e[0m"
 echo Installing yarp-devices...
 cd  # go home
@@ -63,6 +63,6 @@ echo Installing teo-configuration-files
 cd
 git clone https://github.com/roboticslab-uc3m/teo-configuration-files
 cd teo-configuration-files && mkdir build && cd build
-sudo make install
+cmake .. && sudo make install
 echo -e "Installing teo-configuration-files... \e[92m[ok]\e[0m"
 echo -e "\e[2mInstallation completed successfully\e[0m"
