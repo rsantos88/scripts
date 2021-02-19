@@ -50,7 +50,7 @@ axesH = posH.getAxes()  # retrieve number of joints
 #-- Text-to-speech (TTS)
 tts = yarp.RpcClient()
 tts.open('/demo/tts/rpc:c')
-yarp.Network.connect('/demo/tts/rpc:c','/tts/rpc:s');
+yarp.Network.connect('/demo/tts/rpc:c','/teo/tts/rpc:s');
 
 def ttsLang(language):
     cmd = yarp.Bottle()
@@ -220,7 +220,7 @@ ra = list([-46.94, -24.47, 2.74, -53.46, 0.0, 0.0])
 la = list([-46.94, 24.47, 2.74, -53.46, 0.0, 0.0])
 posRA.positionMove(yarp.DVector(ra))
 posLA.positionMove(yarp.DVector(la))
-ttsSay('ahora veo tus dos manos. Concha, esto es una locura ')
+ttsSay('ahora veo tus dos manos. Esto es una locura ')
 while not (posLA.checkMotionDone() and posRA.checkMotionDone() ):
     sleep(0.1)
 
