@@ -50,7 +50,7 @@ axesH = posH.getAxes()  # retrieve number of joints
 #-- Text-to-speech (TTS)
 tts = yarp.RpcClient()
 tts.open('/demo/tts/rpc:c')
-yarp.Network.connect('/demo/tts/rpc:c','/teo/tts/rpc:s');
+yarp.Network.connect('/demo/tts/rpc:c','/tts/rpc:s');
 
 def ttsLang(language):
     cmd = yarp.Bottle()
