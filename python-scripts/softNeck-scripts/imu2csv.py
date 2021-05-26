@@ -1,5 +1,5 @@
 # Author: Raul de Santos Rico
-# Description: Script of a demo where Teo moves the trunk with the aim of stabilizing the neck
+# Description: Script that receives data from the IMU sensor through a YARP port and saves it to a CSV file.
 # CopyPolicy: released under the terms of the LGPLv2.1
 # Python version: 2.7
 
