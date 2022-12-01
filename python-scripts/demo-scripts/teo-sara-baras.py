@@ -87,7 +87,6 @@ for joint in range(0, axesRA):
 	posLA.setRefAcceleration(joint, 20)
 
 # Configure speed
-
 for joint in range(0, axesRA):
 	llRA.setVelLimits(joint, 0, 35) 
 	llLA.setVelLimits(joint, 0, 35)
@@ -98,7 +97,6 @@ posLA.setRefSpeeds(sp)
 
 
 # ------ Script ------
-# Right Arm moving
 
 la = list([-54.6, 6, 13.57, -77.18, -3.55, -19.28])
 posLA.positionMove(yarp.DVector(la))
@@ -217,10 +215,3 @@ posLA.positionMove(la)
 while not (posLA.checkMotionDone() and posRA.checkMotionDone()):
     sleep(0.1)
 
-# Home
-#head = yarp.DVector(axesH,0.0)
-#ra = yarp.DVector(axesRA,0.0)
-#la = yarp.DVector(axesLA,0.0)
-#posH.positionMove(head)
-#posRA.positionMove(ra)
-#posLA.positionMove(la)
