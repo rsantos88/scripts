@@ -96,15 +96,6 @@ sp = yarp.DVector(axesLA, 30)
 posRA.setRefSpeeds(sp)
 posLA.setRefSpeeds(sp)
 
-# Home
-
-head = yarp.DVector(axesH,0.0)
-ra = yarp.DVector(axesRA,0.0)
-la = yarp.DVector(axesLA,0.0) 
-
-posH.positionMove(head)
-posRA.positionMove(ra)
-posLA.positionMove(la)
 
 # ------ Script ------
 # Right Arm moving
@@ -165,11 +156,66 @@ tts.say('tirititran tran tran, tiriti trantrantran!')
 while not (posLA.checkMotionDone() and posRA.checkMotionDone()):
     sleep(0.1)
     
-la = list([-90, 10, 20.56, -45.5, -55, 7])
+la = list([-89.8, -14, 20.56, -45.5, -78, -29])
+posLA.positionMove(yarp.DVector(la))
+while not (posLA.checkMotionDone()):
+    sleep(0.1)
+    
+la = list([-96, -19, 20.56, -45.5, -78, -29])
 posLA.positionMove(yarp.DVector(la))
 while not (posLA.checkMotionDone() and tts.checkSayDone()):
     sleep(0.1)
 
+la = list([-96, -2, -4, -67.2, -78.1, -54.12])
+ra = list([-96,  2,  4, -67.2,  78.1, -54.12])
+tts.say('Jejejeje, soy todo un artista. Cuando quieras te espero en el laboratorio y bailamos juntos.')
+posLA.positionMove(yarp.DVector(la))
+posRA.positionMove(yarp.DVector(ra))
+while not (posLA.checkMotionDone() and posRA.checkMotionDone() and tts.checkSayDone()):
+    sleep(0.1)
+    
+    
+la = list([-37.8, 6, -9.5, -73.23, 0.0, 8.73])
+ra = list([-37.8, -6, 9.5, -73.23, 0.0, 8.73])
+posLA.positionMove(yarp.DVector(la))
+posRA.positionMove(yarp.DVector(ra))
+tts.say('¡Un beso muy grande!')
+while not (posLA.checkMotionDone() and posRA.checkMotionDone() and tts.checkSayDone()):
+    sleep(0.1)
+    
+    
+la = list([-89.8, -14, 20.56, -45.5, -55, 7])
+ra = list([12.6, -41.16, 51.56, -79.16, 72.85, -50.6])
+posLA.positionMove(yarp.DVector(la))
+posRA.positionMove(yarp.DVector(ra))
+tts.say('tra tra tra, tirititran!')
+tts.say('tirititran tran tran, tiriti trantrantran!')
+while not (posLA.checkMotionDone() and posRA.checkMotionDone()):
+    sleep(0.1)
+    
+la = list([-89.8, -14, 20.56, -45.5, -78, -29])
+posLA.positionMove(yarp.DVector(la))
+while not (posLA.checkMotionDone()):
+    sleep(0.1)
+    
+la = list([-96, -19, 20.56, -45.5, -78, -29])
+posLA.positionMove(yarp.DVector(la))
+while not (posLA.checkMotionDone() and tts.checkSayDone()):
+    sleep(0.1)
+
+
+# Home
+
+head = yarp.DVector(axesH,0.0)
+ra = yarp.DVector(axesRA,0.0)
+la = yarp.DVector(axesLA,0.0) 
+
+posH.positionMove(head)
+posRA.positionMove(ra)
+posLA.positionMove(la)
+
+while not (posLA.checkMotionDone() and posRA.checkMotionDone()):
+    sleep(0.1)
 
 # Home
 #head = yarp.DVector(axesH,0.0)
