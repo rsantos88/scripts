@@ -7,7 +7,7 @@
 # CopyPolicy: released under the terms of the LGPLv2.1
 # Python version: 2.7
 
-robot = '/teoSim'
+robot = '/teo'
 
 from time import sleep
 import roboticslab_speech as speech
@@ -83,13 +83,13 @@ def pause():
 
 # Configure acceleration
 for joint in range(0, axesRA):
-	posRA.setRefAcceleration(joint, 20) # manual por rpc --> set accs (20 20 20 20 20 20 20 0)
-	posLA.setRefAcceleration(joint, 20)
+	posRA.setRefAcceleration(joint, 30) # manual por rpc --> set accs (20 20 20 20 20 20 20 0)
+	posLA.setRefAcceleration(joint, 30)
 
 # Configure speed
 for joint in range(0, axesRA):
-	llRA.setVelLimits(joint, 0, 35) 
-	llLA.setVelLimits(joint, 0, 35)
+	llRA.setVelLimits(joint, 0, 31) 
+	llLA.setVelLimits(joint, 0, 31)
 	
 sp = yarp.DVector(axesLA, 30)
 posRA.setRefSpeeds(sp)
@@ -125,7 +125,7 @@ tts.say('Quiero que sepas que soy tu mayor fan y que estoy aprendiendo a bailar 
 while not (posLA.checkMotionDone() and posRA.checkMotionDone() and tts.checkSayDone()):
     sleep(0.1)
     
-la = list([12.6, 41.16, -51.56, -79.16, -72.85, -50.6])
+la = list([12.6, 45.16, -51.56, -79.16, -72.85, -50.6])
 ra = list([-89.8, -14, 20.56, -45.5, 12.6, 0])
 posLA.positionMove(yarp.DVector(la))
 posRA.positionMove(yarp.DVector(ra))
@@ -134,7 +134,7 @@ while not (posLA.checkMotionDone() and posRA.checkMotionDone() and tts.checkSayD
     sleep(0.1)
     
     
-ra = list([-89.8, -14, 20.56, -45.5, -30, -16])
+ra = list([-89.8, -14, 20.56, -45.5, -30, -16]) 
 posRA.positionMove(yarp.DVector(ra))
 tts.say('¡Olé, olé, oléeeeee')
 while not (posRA.checkMotionDone()):
@@ -146,7 +146,7 @@ while not (posRA.checkMotionDone()):
     sleep(0.1) 
     
 la = list([-89.8, -14, 20.56, -45.5, -55, 7])
-ra = list([12.6, -41.16, 51.56, -79.16, 72.85, -50.6])
+ra = list([12.6, -45.16, 51.56, -79.16, 72.85, -50.6])
 posLA.positionMove(yarp.DVector(la))
 posRA.positionMove(yarp.DVector(ra))
 tts.say('tra tra tra, tirititran!')
@@ -183,7 +183,7 @@ while not (posLA.checkMotionDone() and posRA.checkMotionDone() and tts.checkSayD
     
     
 la = list([-89.8, -14, 20.56, -45.5, -55, 7])
-ra = list([12.6, -41.16, 51.56, -79.16, 72.85, -50.6])
+ra = list([12.6, -45.16, 51.56, -79.16, 72.85, -50.6])
 posLA.positionMove(yarp.DVector(la))
 posRA.positionMove(yarp.DVector(ra))
 tts.say('tra tra tra, tirititran!')
