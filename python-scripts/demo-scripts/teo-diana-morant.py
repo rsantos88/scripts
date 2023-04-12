@@ -100,7 +100,7 @@ posLA.setRefSpeeds(sp)
 
 la = list([-54.6, 6, 13.57, -77.18, -3.55, -19.28])
 posLA.positionMove(yarp.DVector(la))
-tts.say('Buenos días estimada ministra Diana Motant. ¿Qué tal se encuentra?')
+tts.say('Buenos días y bienvenidos al laboratorio de grobotica de la universidad Carlos tercero de Madrid ¿Qué tal estais?')
 while not (posLA.checkMotionDone()):
     sleep(0.1)
 
@@ -121,7 +121,7 @@ la = list([-37.8, 6, -9.5, -73.23, 0.0, 8.73])
 ra = list([-37.8, -6, 9.5, -73.23, 0.0, 8.73])
 posLA.positionMove(yarp.DVector(la))
 posRA.positionMove(yarp.DVector(ra))
-tts.say('Es un placer recibirla en nuestro laboratorio de grobotica para contarle todas las novedades')
+tts.say('Es un placer grecibiros en nuestras instalaciones para contaros todas las novedades sobre nuestra investigacion. ')
 while not (posLA.checkMotionDone() and posRA.checkMotionDone() and tts.checkSayDone()):
     sleep(0.1)
     
@@ -129,7 +129,7 @@ la = list([-65,  3.15,  0.64, -54.6, -0.32, -28.48])
 ra = list([-65, -3.15,  0.64, -54.6, -0.32, -28.48])
 posLA.positionMove(yarp.DVector(la))
 posRA.positionMove(yarp.DVector(ra))
-tts.say('Espero que disfrute de la visita.')
+tts.say('Yo soy, el humanoide estreiia, jejejeje. Espero que disfruteiis de la visita.')
 while not (posLA.checkMotionDone() and posRA.checkMotionDone() and tts.checkSayDone()):
     sleep(0.1)
     
