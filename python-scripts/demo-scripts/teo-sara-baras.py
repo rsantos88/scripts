@@ -7,7 +7,7 @@
 # CopyPolicy: released under the terms of the LGPLv2.1
 # Python version: 2.7
 
-robot = '/teo'
+robot = '/teoSim'
 
 from time import sleep
 import roboticslab_speech as speech
@@ -100,7 +100,7 @@ posLA.setRefSpeeds(sp)
 
 la = list([-54.6, 6, 13.57, -77.18, -3.55, -19.28])
 posLA.positionMove(yarp.DVector(la))
-tts.say('Hola Sara. Soy Teo, el robot más flamenco del RoboticsLab de la Universidad Carlos Tercero de Madrid')
+tts.say('Hola Sara. Soy Teo, el grobot más flamenco del GroboticsLab de la Universidad Carlos Tercero de Madrid')
 while not (posLA.checkMotionDone()):
     sleep(0.1)
 
