@@ -100,7 +100,7 @@ posLA.setRefSpeeds(sp)
 
 la = list([-94, 26, 4, -43.5, -42.6, 0])
 posLA.positionMove(yarp.DVector(la))
-tts.say('Jou Jou Joou. Soy Teo. El humanoide de la Navidad. Solo queria saludaros y desearos unas felices fiestas')
+tts.say('Jou Jou Jou. Soy Teo. El humanoide de la Navidad. Solo queria saludaros y desearos unas felices fiestas')
 while not (posLA.checkMotionDone()):
     sleep(0.1)
 
@@ -139,7 +139,7 @@ la = list([-37.8, 6, -9.5, -73.23, 0.0, 8.73])
 ra = list([-37.8, -6, 9.5, -73.23, 0.0, 8.73])
 posLA.positionMove(yarp.DVector(la))
 posRA.positionMove(yarp.DVector(ra))
-tts.say('jou jou joou, feliz 2023')
+tts.say('jou jou jou, feliz 2023')
 while not (posLA.checkMotionDone() and posRA.checkMotionDone() and tts.checkSayDone()):
     sleep(0.1)
     
