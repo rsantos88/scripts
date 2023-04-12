@@ -7,7 +7,7 @@
 # CopyPolicy: released under the terms of the LGPLv2.1
 # Python version: 2.7
 
-robot = '/teoSim'
+robot = '/teo'
 
 from time import sleep
 import roboticslab_speech as speech
@@ -88,7 +88,7 @@ for joint in range(0, axesRA):
 
 # Configure speed
 for joint in range(0, axesRA):
-	llRA.setVelLimits(joint, 0, 31) 
+	llRA.setVelLimits(joint, 0, 31)
 	llLA.setVelLimits(joint, 0, 31)
 	
 sp = yarp.DVector(axesLA, 30)
@@ -150,6 +150,7 @@ la = yarp.DVector(axesLA,0.0)
 
 posH.positionMove(head)
 posRA.positionMove(ra)
+sleep(1)
 posLA.positionMove(la)
 
 while not (posLA.checkMotionDone() and posRA.checkMotionDone()):
